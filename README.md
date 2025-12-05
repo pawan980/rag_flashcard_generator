@@ -42,6 +42,7 @@ Get your key from:
 ➡ https://ai.google.dev
 
 🧠 How It Works
+
 1️⃣ Load & Chunk Documents
 vector_db.py handles:
 PDF/Text loading
@@ -53,7 +54,6 @@ Retriever creation
 2️⃣ LCEL Chain for Flashcard Generation
 
 flashcards.py creates a pipeline:
-
 retriever
   | join_docs
   | prompt_template
@@ -63,38 +63,17 @@ retriever
 3️⃣ Output Formatting
 
 Flashcards are converted into beautiful Markdown:
-
 ## 📘 Flashcard 1 — *Topic: LCEL* (Difficulty: Easy)
-
 **Q:** What is LCEL?  
 **A:** A pipe-based expression language for composing LangChain workflows.
 
----
-
-▶️ Usage
-
-To generate flashcards:
-
-python flashcards.py
-
-
-To generate from custom file:
-
-from flashcards import generate_flashcards
-
-cards = generate_flashcards("my_notes.pdf", pretty=True)
-print(cards)
-
 📝 Example Output
 ## 📘 Flashcard 1 — *Topic: RAG* (Difficulty: Medium)
-
 **Q:** Why is retrieval used before calling an LLM?  
 **A:** It reduces hallucination by grounding the model’s response in relevant context.
 
 ---
-
 ## 📘 Flashcard 2 — *Topic: Embeddings* (Difficulty: Easy)
-
 **Q:** What are embeddings used for?  
 **A:** Converting text into vectors for semantic search.
 ---
@@ -102,6 +81,6 @@ print(cards)
 
 🧑‍💻 Author
 
-Pawan
+Pawan - 
 AI Engineer · Python Developer · RAG Architect
 ✨ Always learning, always building.
